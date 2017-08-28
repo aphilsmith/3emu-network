@@ -1,4 +1,4 @@
-# nimiq-exchange-token
+# 3emu-exchange-token
 Fundraising Contract
 
 ## Run Testsuite
