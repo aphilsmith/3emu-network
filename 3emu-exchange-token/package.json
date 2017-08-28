@@ -1,0 +1,32 @@
+{
+  "name": "3emu-exchange-token",
+  "version": "1.0.0",
+  "homepage": "http://3emu.net/",
+  "description": "",
+  "main": "contracts/3EMUToken.sol",
+  "private": true,
+  "scripts": {
+    "testRPC": "./startTestRPC.sh",
+    "build": "truffle compile",
+    "test": "truffle test"
+  },
+  "author": {
+    "name": "The 3EMU Core Development Team",
+    "url": "http://3emu.net/"
+  },
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/3emu-network/3emu-exchange-token/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/3emu-network/3emu-exchange-token.git"
+  },
+  "engines": {
+    "node": ">=7.9.0"
+  },
+  "devDependencies": {
+    "ethereumjs-testrpc": "^3.0.5",
+    "truffle": "^3.2.5"
+  }
+}
