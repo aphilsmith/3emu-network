@@ -96,7 +96,7 @@ contract StandardToken is Token, SafeMath {
 }
 
 /* Taking ideas from BAT token */
-contract 3EMUToken is StandardToken {
+contract EMUToken is StandardToken {
 
     // Token metadata
     string public constant name = "3EMU Network Interim Token";
@@ -176,7 +176,7 @@ contract 3EMUToken is StandardToken {
     }
 
     // Constructor
-    function 3EMUToken(
+    function EMUToken(
     address _ethFundDeposit,
     uint256 _fundingStartBlock,
     uint256 _fundingEndBlock,
@@ -276,7 +276,7 @@ contract 3EMUToken is StandardToken {
         require(netVal >= TOKEN_MIN); // At least TOKEN_MIN tokens have to be redeemed
 
         // Move the tokens of the caller to 3EMU's address
-        if (!super.transfer(ethFundDeposit, n3EMUetVal)) throw;
+        require(super.transfer(ethFundDeposit, n3EMUetVal));
 
         // Log the redeeming of this tokens
         LogRedeem3EMU(msg.sender, 3emuVal, 3emuAddress);
